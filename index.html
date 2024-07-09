@@ -1,0 +1,466 @@
+<!DOCTYPE html>
+<html lang="en">
+  <head>
+    <meta charset="utf-8" />
+    <meta name="viewport" content="width=device-width, initial-scale=1" />
+    <link rel="stylesheet" href="./css/bootstrap.min.css" />
+    <link rel="stylesheet" href="./css/boxicons.min.css" />
+    <link rel="stylesheet" href="./css/owl.carousel.min.css" />
+    <link rel="stylesheet" href="./css/owl.theme.default.min.css" />
+    <link rel="stylesheet" href="./css/style.css" />
+
+    <title>Itabe Academy</title>
+  </head>
+  <body>
+    <!-- NAVBAR -->
+    <section id="header" class="section-padding">
+      <nav class="navbar navbar-expand-lg bg-white fixed-top ">
+        <div class="container">
+      <!-- ***** Logo Start ***** -->
+      <a href="index.html" class="logo">
+        <h4 class="title">Itabe<span>Academy</span></h4>
+      </a>
+      <!-- ***** Logo End ***** -->
+          <button
+            class="navbar-toggler"
+            type="button"
+            data-bs-toggle="collapse"
+            data-bs-target="#navbarNav"
+            aria-controls="navbarNav"
+            aria-expanded="false"
+            aria-label="Toggle navigation"
+            
+          >
+            <span class="ti-align-justify navbar-toggler-icon"></span>
+          </button>
+
+          <div class="collapse navbar-collapse" id="navbarNav">
+            <ul class="navbar-nav ms-auto">
+              <li class="nav-item">
+                <a class="nav-link " aria-current="page" href="index.html"class="active">Home</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#about">About Us</a>
+              </li>
+              <li class="nav-item">
+                <a class="nav-link" href="#service">Services</a>
+              </li>
+              <li class="nav-item">
+                <a href="#contact" class="btn btn-brand ms-lg-3">Contact Us</a>
+              </li>
+              
+              <li class="translate-dropdown">
+                <img id="language-logo" src="./img/iconmarocc.png" alt="Language Logo">
+                <select class="option" id="language-select">
+                  <option value="ar" data-icon="./img/iconmarocc.png">العربية</option>
+                  <option value="en" data-icon="./img/iconusa.png">English</option>
+                  <option value="fr" data-icon="./img/iconfrancc.png">Français</option>
+                  <!-- Add more languages as needed -->
+                </select>
+              </li>
+            </ul>
+        
+      </div>
+          </div>
+
+
+
+        </div>
+      </nav>
+    </section> 
+    
+<!-- script translate -->
+    <script>
+      document.addEventListener('DOMContentLoaded', function() {
+        const selectElement = document.getElementById('language-select');
+        
+        // Function to update the logo based on the selected language
+        function updateLogo() {
+          const selectedOption = selectElement.options[selectElement.selectedIndex];
+          const logoSrc = selectedOption.getAttribute('data-icon');
+          const logoImg = document.getElementById('language-logo');
+          
+          if (logoImg) {
+            logoImg.src = logoSrc;
+          } else {
+            const imgElement = document.createElement('img');
+            imgElement.id = 'language-logo';
+            imgElement.src = logoSrc;
+            imgElement.alt = 'Language Logo';
+            selectElement.parentNode.insertBefore(imgElement, selectElement);
+          }
+        }
+        
+        // Initial logo update
+        updateLogo();
+        
+        // Update logo on change
+        selectElement.addEventListener('change', updateLogo);
+      });
+    </script>
+    <!-- /NAVBAR -->
+
+    <!--HOME SECTION-->
+    <section id="home" class="home section-padding">
+      <div
+        id="carouselExampleSlidesOnly"
+        class="carousel slide"
+        data-bs-ride="carousel"
+      >
+        <div class="carousel-inner">
+          <div class="carousel-item active">
+            <img src="./img/sliderdigital.png" class="d-block w-100" alt="..." />
+          </div>
+        </div>
+      </div>
+    </section>
+    <!--/HOME SECTION-->
+
+<!-- about SECTION-->
+<section class="about-section section-padding" id="about">
+  <div class="container">
+      <div class="row">
+
+          <div class="title col-lg-6 col-12">
+            <h2 class="title">why chose <span>Us?</span><h4>
+         
+          </div>
+
+          <div class="clearfix"></div>
+
+          <div class="col-lg-5 col-12">
+              <img src="img/undraw_about.png" class="img-fluid" alt="about">
+          </div>
+
+          <div class="col-lg-6 col-12 m-auto">
+              <div class="accordion" id="accordionExample">
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingOne">
+                          <button class="accordion-button" type="button" data-bs-toggle="collapse" data-bs-target="#collapseOne" aria-expanded="true" aria-controls="collapseOne">
+                            Expert Instructors
+                          </button>
+                      </h2>
+
+                      <div id="collapseOne" class="accordion-collapse collapse show" aria-labelledby="headingOne" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            Our team of instructors consists of industry experts and experienced developers who bring real-world knowledge into the classroom. With years of experience and a passion for teaching, our instructors ensure that you receive high-quality, up-to-date education that is directly applicable to current industry needs.                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingTwo">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseTwo" aria-expanded="false" aria-controls="collapseTwo">
+                            Certifications and Career Support
+                      </button>
+                      </h2>
+
+                      <div id="collapseTwo" class="accordion-collapse collapse" aria-labelledby="headingTwo" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            Upon completion of our courses, you receive industry-recognized certifications that validate your skills and knowledge. We also provide career support services, including resume building, interview preparation, and job placement assistance, to help you advance in your career and achieve your professional goals.                          </div>
+                      </div>
+                  </div>
+
+                  <div class="accordion-item">
+                      <h2 class="accordion-header" id="headingThree">
+                          <button class="accordion-button collapsed" type="button" data-bs-toggle="collapse" data-bs-target="#collapseThree" aria-expanded="false" aria-controls="collapseThree">
+                            Advanced Java Technologies
+                      </button>
+                      </h2>
+
+                      <div id="collapseThree" class="accordion-collapse collapse" aria-labelledby="headingThree" data-bs-parent="#accordionExample">
+                          <div class="accordion-body">
+                            We stay ahead of the curve by utilizing advanced Java technologies such as Spring Framework, Hibernate, and JavaServer Faces (JSF). These technologies enable us to create high-performance applications with efficient data handling and user-friendly interfaces.                          </div>
+                      </div>
+                  </div>
+              </div>
+          </div>
+
+      </div>
+  </div>
+</section>
+
+
+
+    
+    <!-- <section class="about section-padding" id="about" >
+      <div class="container">
+        <div class="row">
+          <div class="col-12">
+            <div class="heading text-center text-uppercase">
+              <h2 fow-bolder>why chose us?</h2>
+              <p>
+                Lorem Ipsum is simply dummy text of the printing and typesetting
+                industry. Lorem Ipsum has been the industry's standard dummy
+                text ever since the 1500s, when an unknown printer took a galley
+                of type and scrambled it to make a type specimen book. It has
+                survived not only five centuries, but also the leap into
+                electronic typesetting, remaining essentially unchanged. It was
+                popularised in the 1960s with the release of Letraset sheets
+                containing Lorem Ipsum passages, and more recently with desktop
+                publishing software like Aldus PageMaker including versions of
+                Lorem Ipsum.
+              </p>
+            </div>
+          </div>
+        </div>
+      </div>
+    </section> -->
+    <!--/about SECTION -->
+
+    <!-- Services -->
+    <section class="service container section-padding" id="service" >
+      <div class="row">
+        <div class="col-12">
+         
+            <div class="col-12 text-center">
+              <h2 class="title mb-4">OUR <span>SERVICE</span><h4></h4>         
+          </div>
+        
+        </div>
+      </div>
+        <div class="row">
+            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="custom-block bg-white shadow-lg">
+                
+                        <div class="d-flex">
+                            <div>
+                                <h5 class="title mb-2">Learning</h5>
+
+                                <p class="mb-0"> learning backend and frontend and framework</p>
+                            </div>   
+                        </div>
+
+                        <img src="./img/undraw_learning.png" class="custom-block-image img-fluid" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12 mb-4 mb-lg-0">
+                <div class="custom-block bg-white shadow-lg">
+                
+                        <div class="d-flex">
+                            <div>
+                                <h5 class="title mb-2">Creation Application</h5>
+
+                                    <p class="mb-0">Create Application in your business</p>
+                            </div>
+                        </div>
+
+                        <img src="./img/undraw_crationsapp.png" class="custom-block-image img-fluid" alt="">
+                    </a>
+                </div>
+            </div>
+
+            <div class="col-lg-3 col-md-6 col-12">
+                <div class="custom-block bg-white shadow-lg">
+                
+                        <div class="d-flex">
+                            <div>
+                                <h5 class="title mb-2">SEO</h5>
+                                    <p class="mb-0">Search Engine Optimization</p>
+                            </div>
+                        </div>
+
+                        <img src="./img/undraw_seo.png" class="custom-block-image img-fluid" alt="">
+                    </a>
+                </div>
+            </div>
+            
+            <div class="col-lg-3 col-md-6 col-12">
+              <div class="custom-block bg-white shadow-lg">
+              
+                      <div class="d-flex">
+                          <div>
+                              <h5 class="title mb-2">hosting</h5>
+
+                                  <p class="mb-0"> Hosting for your website and application</p>
+                          </div>
+                      </div>
+                      <img src="./img/undraw_Hosting.png" class="custom-block-image img-fluid" alt="">
+                  </a>
+              </div>
+          </div>
+        </div>
+
+    </section>
+    
+
+    <!-- CONTACT -->
+    <section id="contact">
+      <div class="container">
+        <div class="col-12 text-center">
+          <h2 class="title mb-4">Contact <span>Us</span><h4></h4>         
+      </div>
+        <div class="row">     
+          <div class="custom-block bg-white shadow-lg">
+          <div class="contact-form">
+            <form id="contact footer-contact" action="" method="post">
+              <div class="row">
+                <div class="col-lg-6 col-12">
+                  <img src="img/contactUss.png" class="img-fluid" alt="about">
+              </div>
+                <div class="col-lg-6">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input
+                        name="name"
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        placeholder="Full Name"
+                        required=""
+                      />
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input
+                        name="email"
+                        type="text"
+                        class="form-control"
+                        id="email"
+                        pattern="[^ @]*@[^ @]*"
+                        placeholder="E-Mail Address"
+                        required=""
+                      />
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea
+                        name="message"
+                        rows="6"
+                        class="form-control"
+                        id="message"
+                        placeholder="Your Message"
+                        required=""
+                      ></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button
+                        type="submit"
+                        id="form-submit"
+                        class="filled-button"
+                      >
+                        Send Message
+                      </button>
+                    </fieldset>
+                  </div>
+                </div>
+
+              </div>
+            </form>
+          </div>
+        </div>
+        </div>
+      </div>
+    </section>
+
+ 
+
+    <footer>
+      <div class="container">
+        <div class="row">
+          <div class="col-md-4 footer-item">
+            <h4 class="title">Itabe<span>Academy</span></h4>   
+            <p>
+              At ITabAcademy, we are dedicated to empowering individuals
+               with the skills and knowledge needed to excel in the world of software development. Our platform offers a wide range of courses in various programming languages and technologies, ensuring
+               that you stay ahead in the fast-paced tech industry.
+            </p>
+            <ul class="social-icons">
+              <li>
+                <a
+                  rel="nofollow"
+                  href="#"
+                  target="_blank"
+                  ><i class='bx bxl-facebook'></i></a>
+              </li>
+              <li>
+                <a href="#"><i class='bx bxl-instagram' ></i></i></a>
+              </li>
+              <li>
+                <a href="#"><i class='bx bxl-youtube' ></i></i></a>
+              </li>
+              <li>
+                <a href="#"><i class='bx bxl-whatsapp' ></i></i></a>
+              </li>
+            </ul>
+          </div>
+          <div class="col-md-4 footer-item">
+            <h4>Useful Links</h4>
+            <ul class="menu-list">
+              <li><a href="#home">Home</a></li>
+              <li><a href="#about">About Us</a></li>
+              <li><a href="#service">Services</a></li>
+              <li><a href="#contact">Contact Us</a></li>
+            </ul>
+          </div>
+          <div class="col-md-4 footer-item last-item">
+            <h4>Contact Us</h4>
+            <div class="contact-form">
+              <form id="contact footer-contact" action="" method="post">
+                <div class="row">
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input
+                        name="name"
+                        type="text"
+                        class="form-control"
+                        id="name"
+                        placeholder="Full Name"
+                        required=""
+                      />
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12 col-md-12 col-sm-12">
+                    <fieldset>
+                      <input
+                        name="email"
+                        type="text"
+                        class="form-control"
+                        id="email"
+                        pattern="[^ @]*@[^ @]*"
+                        placeholder="E-Mail Address"
+                        required=""
+                      />
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <textarea
+                        name="message"
+                        rows="6"
+                        class="form-control"
+                        id="message"
+                        placeholder="Your Message"
+                        required=""
+                      ></textarea>
+                    </fieldset>
+                  </div>
+                  <div class="col-lg-12">
+                    <fieldset>
+                      <button
+                        type="submit"
+                        id="form-submit"
+                        class="filled-button"
+                      >
+                        Send Message
+                      </button>
+                    </fieldset>
+                  </div>
+                </div>
+              </form>
+            </div>
+          </div>
+        </div>
+      </div>
+    </footer>
+
+    <script src="./js/jquery.min.js"></script>
+    <script src="./js/bootstrap.bundle.min.js"></script>
+    <script src="./js/owl.carousel.min.js"></script>
+  </body>
+</html>
